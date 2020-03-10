@@ -15,9 +15,9 @@ public class Main {
 		final int MAX = 2000000000;
 		for (int i = 0; i < T; i++) {
 			st = new StringTokenizer(br.readLine());
-			long N = Long.parseLong(st.nextToken()); // 플레이 횟수
-			long M = Long.parseLong(st.nextToken()); // 승리 횟수
-			long Z = (M * 100) / N; // 승률
+			int N = Integer.parseInt(st.nextToken()); // 플레이 횟수
+			int M = Integer.parseInt(st.nextToken()); // 승리 횟수
+			int Z = (int) Math.floor((double) M * 100 / N); // 승률
 
 			if (Z >= 99) {
 				bw.write("-1\n");
