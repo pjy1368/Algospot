@@ -57,6 +57,9 @@ public class Main {
 					// i번째 자료에 의하면 모든 재료는 put[i] / recipe[i] = X배 이상은 넣어야 한다.
 					// 따라서 put[i]는 recipe[i] * X 이상의 정수가 되어야 한다.
 					int required = (put[i] * recipe[j] + recipe[i] - 1) / recipe[i];
+					// (recipe[i] - 1)을 하는 이유는 이를 올림하기 위함인데, 위 코드 대신에 아래와 같이
+					// 대신 아용해도 문제는 없다. 다만, 연산 과정에서 불필요한 추가 시간이 붙게 된다.
+					// int required = (int) Math.ceil((double) put[i] * recipe[j] / recipe[i]);
 
 					// 더 넣어야하는가?
 					if (required > put[j]) {
