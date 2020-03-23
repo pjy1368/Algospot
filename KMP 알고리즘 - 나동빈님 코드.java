@@ -27,7 +27,7 @@ public class Main {
 	// 실패 함수
 	public static Vector<Integer> makeTable(String pattern) {
 		int patternSize = pattern.length();
-		Vector<Integer> table = new Vector();
+		Vector<Integer> table = new Vector<>();
 		for (int i = 0; i < patternSize; i++) {
 			table.add(0);
 		}
